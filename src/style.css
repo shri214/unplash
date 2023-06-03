@@ -1,0 +1,119 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+.Search-bar {
+  height: 30px;
+  font-size: 25px;
+  width: 60%;
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+.search-box {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.search-btn {
+  height: 30px;
+  position: absolute;
+  width: 85px;
+  font-size: 23px;
+  border: 1px solid;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.btn-box {
+  height: 35px;
+  width: 90px;
+  inset: 2px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+
+  /* border: 1px solid rgb(18, 1, 1); */
+}
+.btn-box::before {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 90px;
+  top: -50%;
+  left: -50%;
+  transform-origin: bottom right;
+  background-color: aqua;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn-box::after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 90px;
+  top: -50%;
+  left: -50%;
+  transform-origin: bottom right;
+  background-color: rgb(0, 255, 13);
+  animation: animates 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animates {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------- */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15vh;
+  gap: 10px;
+}
+.image-container img {
+  height: 323px;
+  width: 273px;
+  object-fit: fill;
+}
+
+.btns {
+  height: 30px;
+  font-size: 22px;
+  padding: 2px 5px;
+  display: block;
+  margin: 10px auto;
+}
